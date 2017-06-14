@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<!--<eager-component>
+</eager-component>-->
+<!--if this app failed to build - https://github.com/angular/angular-cli/issues/5817-->
+<div>
+  <nav>
+    <a [routerLink]="['/eager']">Eager</a>
+    <a [routerLink]="['/lazy']">Lazy</a>
+  </nav>
+  <p><strong> router-outlet:</strong></p>
+  <router-outlet></router-outlet>
+</div>
