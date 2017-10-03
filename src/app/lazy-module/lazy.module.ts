@@ -12,9 +12,13 @@ import { LazyPrivateService } from './lazy-private.service'
 import { LazyService } from './lazy.service'
 
 import { lazyModuleRouting } from './lazy.routing'
+/*NOTE - there is NO need to import SharedModule for his services, (because we already using the forRoot pattern in the app module),
+ we import it to use his shared components and directives etc..*/
+import { SharedModule} from '../shared/shared.module';
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     lazyModuleRouting],
   //components ,directives ,pipes:
   declarations: [

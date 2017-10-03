@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {SharedCounterService} from '../shared/shared-counter.service';
 @Component({
   selector: 'lazy-component',
   template: `
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   
 })
 export class LazyComponent {
-  
+  constructor(private SharedCounterService: SharedCounterService){
+    setInterval(()=>{this.SharedCounterService.inc()},1000);
+    
+  }
 }
